@@ -1,38 +1,367 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@300&family=Lato:wght@900&family=Nuosu+SIL&family=Roboto&family=Spline+Sans+Mono:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul{
+    padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ========== header ======== */
+
+.header{
+    padding: 0 1rem;
+    border-bottom: 2px solid #eee6e6;
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header h1{
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.header-icon{
+    font-size: 2.2rem;
+    margin-top: 47%;
 }
 
-@keyframes App-logo-spin {
-  from {
+.archive-count{
+    display: inline-block;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: -20px;
+    top: 9px;
+    border: 1px solid black;
+    border-radius: 14px;
+}
+
+.archive-count p{
+    position: absolute;
+    left: 8px;
+    top: -12px;
+}
+
+/* ========= search bar============= */
+
+.search-bar{
+    width: 30%;
+    padding: 0.7rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1.5px 1.5px #eee6e6;
+}
+
+.search-bar input[type=text], select{
+    outline: none;
+}
+
+.search-bar input[type=text]{
+    border: none;
+    padding: 10px;
+    width: 75%;
+    font-family: 'Nuosu SIL', serif;
+    font-size: 1.2rem;
+}
+
+.search-bar ::-webkit-input-placeholder {
+    color: rgb(182, 176, 176);
+}
+
+.search-btn{
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgb(92, 90, 90);
+    border: none;
+    right: 1rem;
+}
+
+.search-btn-btn{
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+}
+
+.disable-btn{
+    cursor: default;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgb(186, 184, 184);
+    border: none;
+    right: 1rem;
+    border-radius: 25px;
+    padding: 0.5rem 0.8rem;
+}
+
+.cross-btn{    
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50%;
+}
+
+.search-btn:hover{
+    background-color: black;
+    transform: scale(1.1);
+}
+
+/* ======== body ========= */
+
+.body{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    /* min-height: 30rem; */
+    justify-content: space-around;
+    box-shadow: 0px 0px 1.5px 1.5px #eee6e6;
+    border-radius: 1rem;
+    padding-top: 1.2rem;
+}
+
+/* ========= BoxHeader ========= */
+
+.box-header{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.box-heading{
+    font-family: 'Spline Sans Mono', monospace;
+    display: inline-block;
+    margin: 0;
+}
+
+.box-heading span{
+    font-size: 1.2rem;
+    margin-top: auto;
+    color: #888888;
+}
+
+.box-option{
+    width: 1.4rem;
+    height: 1.4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+
+.box-option:hover{
+    background-color: #f3ebeb;
+}
+
+/* ======== empty box ======== */
+.empty-msg-box{
+    color:#B8B8B8;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* ========= todo box ======== */
+
+.todoBox{
+    width: 20%;
+}
+
+.todoBox ul{
+    max-height: 30rem;
+    overflow-y: scroll;
+}
+
+/* ========= progress box ======== */
+
+.progressBox{
+    width: 35%;
+}
+
+/* ========= finished box ======== */
+
+.finishedBox{
+    width: 35%;
+}
+
+/* ========= Card ========== */
+.card{
+    width: 12rem;
+    height: 12rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(173 26 26);
+    color: #fff;
+    font-family: 'Spline Sans Mono', monospace;
+    box-shadow: 10px 10px 7px #888888;
     transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-heading{
+    display: inline-block;
+}
+
+.card-icon{
+    bottom: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.card-icon-left{
+    position: absolute;
+    right: 3rem;
+}
+
+.card-icon-right{
+    position: absolute;
+    right:1rem;
+}
+
+.card-icon:hover{
+    color: white;
+    transform: scale(1.2);
+}
+
+
+/* ========= Modal ========= */
+
+.backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,0.75);
+    /* overflow: hidden; */
+}
+
+.modal{
+    position: fixed;
+    top: 25vh;
+    left: 35%;
+    z-index: 100;
+    padding: 2rem;
+    width: 26%;
+    height: 17rem;
+    border-radius: 1rem;
+    opacity: 1;
+    background-color: #fff;
+    box-shadow: 0px 0px 1.5px 1.5px #eee6e6;
+}
+
+.modal label{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+}
+
+.modal input[type=text], select{
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.modal input[type=text]{
+    border: none;
+    padding: 7px;
+    width: 85%;
+    color: rgb(92, 90, 90);
+    font-family: 'Roboto', sans-serif;
+    background-color: #dfdfdf;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.modal-icon{
+    font-size: 1.3rem;
+}
+
+.modal-btn{
+    width: 5rem;
+    height: 2.2rem;
+    cursor: pointer;
+    background-color: rgb(53, 52, 52);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.4rem;
+}
+
+.modal-btn:hover{
+    background-color: black;
+    transform: scale(1.1);
+}
+
+
+/* ========= options =========  */
+.menu{
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    padding: 2px 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: rgb(91, 91, 91);
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 14rem;
+    box-shadow: 0 0 7px 1px #888888;
+    transition: opacity 0.5s linear;
+    /* z-index: 10; */
+    opacity: 1;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu li{
+    margin: 0;
+    padding: 5px 1rem;
+}
+
+.menu-list{
+    cursor: pointer;
+}
+
+.menu-list:hover{
+    background-color: #DEDEDE;
+}
+
+.disabled{
+    color: #B8B8B8;
+    cursor: default;
+}
+
+
+/* ========= Scroll Bar ======== */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #B8B8B8; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888888; 
+  }
