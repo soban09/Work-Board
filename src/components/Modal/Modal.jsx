@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { AiOutlinePlus } from "react-icons/ai";
 import { BsCursorText } from "react-icons/bs";
 import { IoMdOptions } from "react-icons/io";
 
