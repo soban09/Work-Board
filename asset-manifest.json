@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Work-Board/static/css/main.a429d10e.css",
+    "main.js": "/Work-Board/static/js/main.f20c4dd1.js",
+    "index.html": "/Work-Board/index.html",
+    "main.a429d10e.css.map": "/Work-Board/static/css/main.a429d10e.css.map",
+    "main.f20c4dd1.js.map": "/Work-Board/static/js/main.f20c4dd1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a429d10e.css",
+    "static/js/main.f20c4dd1.js"
+  ]
+}
